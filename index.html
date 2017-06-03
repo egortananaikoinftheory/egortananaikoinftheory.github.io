@@ -172,8 +172,40 @@ foreach (FileInfo f in oD.GetFiles())
 	                    <div class="divider-1 wow fadeInUp"><span></span></div>
 	                    <p>
 	                    	<div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Diffie-Hellman-Schl%C3%BCsselaustausch.svg/400px-Diffie-Hellman-Schl%C3%BCsselaustausch.svg.png"> </div>
+<p align="left">using System;<br>
+using System.Collections.Generic;<br>
+using System.ComponentModel;<br>
+using System.Data;<br>
+using System.Drawing;<br>
+using System.Linq;<br>
+using System.Text;<br>
+using System.Threading.Tasks;<br>
+using System.Windows.Forms;<br>
 
-	                    </p>
+namespace WindowsFormsApplication1<br>
+{<br>
+    public partial class Form1 : Form<br>
+    {<br>
+        public Form1()<br>
+        {<br>
+            InitializeComponent();<br>
+        }<br>
+
+        private void button1_Click(object sender, EventArgs e)<br>
+        {<br>
+            
+            double b = 0;<br>
+            double b1 = 0;<br>
+            double a1 = Convert.ToDouble(textBox1.Text);<br>
+            double a2 = Convert.ToDouble(textBox2.Text);<br>
+            b = (System.Math.Pow(2, a1*a2) % 11);<br>
+            b1 = (System.Math.Pow(2, a2*a1) % 11);<br>
+            textBox3.Text = Convert.ToString(b);<br>
+            textBox4.Text = Convert.ToString(b1);<br>
+        }
+    }
+}
+	                  </p>  </p>
 	                </div>
 	            </div>
 	            <div class="row">
