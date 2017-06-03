@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+   <title>Information Theory</title>
+
+     
+     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+     <link rel="stylesheet" href="assets/css/magnific-popup.css">
+     <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <body>
+    
+        <!-- Loader -->
+    	<div class="loader">
+    	
+    	</div>
+		
+		<!-- Top menu -->
+		<nav>
+			<a class="scroll-link" href="#what-we-do">Battleship</a>
+			<a class="scroll-link" href="#process">Jef Raskin</a>
+			<a class="scroll-link" href="#portfolio">Diffie-Hellman</a>
+			<a class="scroll-link" href="#testimonials">Secret code</a>
+			<a class="scroll-link" href="#team">Monty Hall problem</a>
+			<div class="hide-menu">
+				<a href=""><i class="fa fa-bars"></i></a>
+			</div>
+		</nav>
+		<div class="show-menu">
+			<a href=""><i class="fa fa-bars"></i></a>
+		</div>
+		
+        <!-- Top content -->
+        <div class="top-content">
+            <div class="top-content-text wow fadeInUp">
+            	<div class="divider-2"><span></span></div>
+            	<h1><a href="">Information Theory</a></h1>
+            	<div class="divider-2"><span></span></div>
+            	<p>Tananaiko Egor</p>
+          
+            </div>
+        </div>
+        
+        <!-- What we do -->
+        <div class="what-we-do-container section-container">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 what-we-do section-description wow fadeIn">
+	                    <h2>Battleship</h2>
+	                    <div class="divider-1 wow fadeInUp"><span></span></div>
+	                   
+						<p align="left" >
+	                
+							До начала игры сговорившиеся должны обговорить, как будет передаваться информация?<br>
+							Информация должна передоваться поблочно, поле делится на 4 равный части<br>
+							<div><img src="assets/img/backgrounds/2.jpg"> </div><br>
+							1. Соратник будет передовать только одну клетку корабля, и говорить расположение: горизонтально или вертикально.<br>
+							Если корабль стоит горизонтально --- Рука у лица или специальное выражение, обозначающее движение.<br>
+							Если корабль стоит вертикально --- ничего делать не надо.<br>
+							При передаче горизантального и вертикально расположения называется самая левая и верхняя клетка, соответственно.<br>
+						    2. В каждой четверти по 5 букв и цифр. Для каждого блока создаются одинаковые выражения и жесты.
+							<ul align="left">
+							Язык:
+							<li >А: всё, что связано с культурой/ поправить волосы.</li>
+							<li>Б:почесать лоб/ взять в руки телефон.</li>
+							<li>В:потереть глаз/ о спорте,ЗОЖ</li>
+							<li>Г:закусить губу/путешествие, страны.</li>
+							<li>Д:размять шею/ всё, связанное с музыкой.</li>
+						<li>1: соеденить пальцы в замок/ журнал, книги.</li>
+						<li>2: подпереть щёку левой рукой/ еда, напитки.</li>
+						<li>3: положить левую руку на колено/ погода, природа.</li>
+						<li>4:положить правую руку на колено/ животный мир.</li>
+						<li>5:положить локти на стол/ обсудить, что было, делал вчера и тд.</li>
+					 </p>
+					 <h4>!количество информации!</h4>
+					 <i> H = nlogm<br>
+					 H = 10log100  --- при обычной передаче<br>
+					 H1 = 5log25 --- при способе кодирования<br>
+					 H1 меньше H </i>
+	                </div>
+	            </div>
+	            <div class="row">
+	            </div>
+	        </div>
+        </div>
+		<div class="block-1-container process-container section-container section-container-gray">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 what-we-do section-description wow fadeIn">
+	                    <h2>Jef Raskin</h2>
+	                    <div><span></span></div>
+	                    <p><pre align="left">
+						using System;
+using System.IO;
+    class AJefRaskinBuckUp
+    {
+        static void Main(string[] args)
+        {
+           System.Console.WriteLine("Hi from AJefraskinBuckUp");
+           FileInfo fi = new FileInfo("C:\\E\\0.txt");
+           AFileCopy(fi);
+           DirectoryContent();
+        }
+
+        static void AFileCopy(FileInfo f)
+        {
+            string s = "";  //строка для формирования имени
+            s = "d:" + "\\" + f.DirectoryName.Substring(3); 
+            //отрезается имя диска, например "С:\Education" - "c:\" = "Education"
+            s += '\\' + f.Name;
+            f.CopyTo(s, true);
+        }
+
+
+               static void DirectoryContent()
+        {
+                        DirectoryInfo oD = new DirectoryInfo("C:\\E");   
+            Console.WriteLine("DIR:{0}\n", oD.FullName.ToString());
+foreach (FileInfo f in oD.GetFiles())
+            {
+                Console.WriteLine("Filename: {0}", f.FullName);
+                AFileCopy(f);
+            }
+		}
+         static void DirectoryContent()
+        {
+            DirectoryInfo oD = new DirectoryInfo("C:\\E");   
+            Console.WriteLine("DIR:{0}\n", oD.FullName.ToString());
+            foreach (FileInfo f in oD.GetFiles())
+            {
+                Console.WriteLine("Filename: {0}", f.FullName);
+                AFileCopy(f);
+            }
+            foreach (DirectoryInfo d in oD.GetDirectories())
+            {
+                AProcessDirs(d);
+            }
+        }
+
+        static void AProcessDirs(DirectoryInfo oD)
+        {
+            foreach (FileInfo f in oD.GetFiles())
+            {
+                Console.WriteLine("Filename: {0}", f.FullName);
+                AFileCopy(f);
+            }
+        }
+		  
+	}
+
+	                  </pre>  </p>
+	                </div>
+	            </div>
+	            <div class="row">
+	            </div>
+	        </div>
+        </div>
+       
+        
+        
+        <!-- Portfolio -->
+        <div class="portfolio-container section-container">
+	          <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 what-we-do section-description wow fadeIn">
+	                    <h2>Diffie-Hellman</h2>
+	                    <div class="divider-1 wow fadeInUp"><span></span></div>
+	                    <p>
+	                    	<div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Diffie-Hellman-Schl%C3%BCsselaustausch.svg/400px-Diffie-Hellman-Schl%C3%BCsselaustausch.svg.png"> </div>
+
+	                    </p>
+	                </div>
+	            </div>
+	            <div class="row">
+	            </div>
+	        </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="testimonials-container section-container section-container-gray">
+	         <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 what-we-do section-description wow fadeIn">
+	                    <h2>Secret code</h2>
+	                    <div class="divider-1 wow fadeInUp"><span></span></div>
+	                    <p>
+	                    	
+	                    </p>
+	                </div>
+	            </div>
+	            <div class="row">
+	            </div>
+	        </div>
+        </div>
+        <!-- Counters -->
+        <div class="team-container section-container">
+        	
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 what-we-do section-description wow fadeIn">
+	                    <h2>Monty Hall problem</h2>
+	                    <div class="divider-1 wow fadeInUp"><span></span></div>
+	                    <p>
+	                    	
+	                    </p>
+	                </div>
+	            </div>
+	            <div class="row">
+	            </div>
+	        </div>
+        </div>
+        </div>
+        
+        
+     
+        <!-- Scroll to top -->
+        <div class="section-container section-container-gray">
+	        <div class="container">
+		        <div class="row">
+		        	<div class="col-sm-12">
+		        		<div class="scroll-to-top">
+		        			<a class="scroll-link" href="#top-content"><i class="fa fa-chevron-up"></i></a>
+		        		</div>
+		        	</div>
+		        </div>
+	        </div>
+        </div>
+                
+        <!-- Footer -->
+        <footer>
+	        <div class="container">
+	            <div class="row">
+                    <div class="col-sm-7 footer-copyright">
+                    	2017 &copy; Designed by Tanstandart.
+                    </div>
+                   
+	            </div>
+	        </div>
+        </footer>
+        
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/retina-1.1.0.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/masonry.pkgd.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        
+      
+    </body>
+
+</html>
