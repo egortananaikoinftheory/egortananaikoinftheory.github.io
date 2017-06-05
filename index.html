@@ -27,6 +27,7 @@
 			<a class="scroll-link" href="#portfolio">Diffie-Hellman</a>
 			<a class="scroll-link" href="#testimonials">Secret code</a>
 			<a class="scroll-link" href="#team">Monty Hall problem</a>
+			<a class="scroll-link" href="#top">Exam</a>
 			<div class="hide-menu">
 				<a href=""><i class="fa fa-bars"></i></a>
 			</div>
@@ -238,16 +239,70 @@ Key B:<input type="TEXT" name="Key B" >
 	                <div class="col-sm-12 what-we-do section-description wow fadeIn">
 	                    <h2>Secret code</h2>
 	                    <div class="divider-1 wow fadeInUp"><span></span></div>
-	                    <p>
-	                    	
-	                    </p>
+	                    <pre><p align="left">
+	                    using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApplication1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double k = 0;
+            double r = 1;
+            double q = 0;
+            double g = 0;
+            double x = 0;
+            double a1=Convert.ToDouble(textBox1.Text);
+            double a2=Convert.ToDouble(textBox2.Text);
+            double v = Convert.ToDouble(textBox3.Text);
+            double s = a1 * a2;
+            x = (a1 - 1) * (a2 - 1);
+            if (a1 != 2)
+            {
+                while (((r * x) + 1) % a1 != 0)
+                {
+                    r++;
+                }
+                k = ((r * x) + 1) / a1;
+                q = (System.Math.Pow(v, a1) % s);
+            }
+            else
+            {
+                while (((r * x) + 1) % a2 != 0)
+                {
+                    r++;
+                }
+                k = ((r * x) + 1) / a2;
+                q = (System.Math.Pow(v, a2) % s);
+            }
+            g = (System.Math.Pow(q, k)) % s;
+            textBox4.Text = Convert.ToString(g);
+        }
+    }
+}	
+	                    </p></pre>
 	                </div>
 	            </div>
 	            <div class="row">
 	            </div>
 	        </div>
         </div>
-       
+           
+
         <div class="team-container section-container">
         	
 	        <div class="container">
@@ -375,7 +430,57 @@ Key B:<input type="TEXT" name="Key B" >
 			
         </div>
 		
-       
+        <div>
+		
+	          <div class="what-we-do-container section-container">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 what-we-do section-description wow fadeIn">
+	                    <h2>Exam</h2>
+	                    <div class="divider-1 wow fadeInUp"><span></span></div>
+<h3><i>Равновесие Нэша</i> </h3>
+<p>Равновесие по Нэшу - стабильное состояние системы, включающих в себя несколько взаимодействующих участников, где <i>ни один</i> участник не может выиграть, изменив стратегию, пока стратегии других участников <i>не меняются</i>.</p>
+	               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/John_Forbes_Nash%2C_Jr..jpg/420px-John_Forbes_Nash%2C_Jr..jpg">
+<p align="justify">В отрасли имеются две фирмы № 1 и № 2. 
+Каждая из фирм может установить два уровня цен: «высокие» и «низкие». 
+Если обе фирмы выберут высокие цены, то каждая будет иметь прибыль по 3 млн.
+ Если обе выберут низкие, то каждая получит п
+ о 2 млн. Однако, если одна выберет высокие, а другая низкие,
+ то вторая получит 4 млн, а первая только 1. Наиболее выигрышный в сумме вариант — одновременный выбор высоких цен (сумма = 6 млн).
+ Однако это состояние нестабильно из-за возможности относительного выигрыша, которая открывается перед фирмой, отступившей от этой стратегии. 
+ Поэтому обе компании с наибольшей вероятностью выберут низкие цены. Хотя этот вариант и не дает максимального суммарного выигрыша (сумма=4 млн.),
+ он исключает относительный выигрыш конкурента, который тот мог бы получить за счет отступления от взаимно-оптимальной стратегии. 
+Такая ситуация и называется «равновесием по Нэшу»</p>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/BALTKWBwfOM" frameborder="0" allowfullscreen></iframe><br>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/vx9Z6r8NwUg" frameborder="0" allowfullscreen></iframe>
+<h4> Самое время решить задачку!</h4>
+<p align="justify">Давайте быстро поделим 100$. Вы и я решаем, сколько из сотни мы требуем и одновременно озвучиваем суммы.
+ Если наша общая сумма меньше ста, каждый получает то, что хотел. Е
+ сли общее количество больше ста, тот, кто попросил наименьшее количество, получает желаемую сумму, а более жадный человек получает то, что осталось.
+ Если мы просим одинаковую сумму, каждый получает 50 $. 
+ Сколько вы попросите? Как вы разделите деньги?</p>
+ 
+ <h3><i>!ОТВЕТ!</i></h3>
+ <p align="justify" >Требование 51 $ даст вам максимальную сумму независимо от того, что выберет ваш противник. Если он попросит больше, вы получите 51 $. Если он попросит 50 $ или 51 $, вы получите 50 $. И если он попросит меньше 50 $, вы получите 51 $. В любом случае нет никакого другого варианта, 
+ который принесет вам больше денег, чем этот. 
+ Равновесие Нэша — ситуация, в которой мы оба выбираем 51 $.</p>
+ <h3>Шифр Цезаря</h3>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/480px-Caesar3.svg.png">
+ <p align="justify">Шифр Цезаря, также известный как шифр сдвига, код Цезаря или сдвиг Цезаря — один из самых простых и наиболее широко известных методов шифрования.
+Шифр Цезаря — это вид шифра подстановки, в котором каждый символ в открытом тексте заменяется символом, находящимся на некотором постоянном числе позиций левее или правее него в алфавите. Например, в шифре со сдвигом вправо на 3, А была бы заменена на Г, Б станет Д, и так далее.
+Шифр назван в честь римского императора Гая Юлия Цезаря, использовавшего его для секретной переписки со своими генералами.</p>
+<p align="justify">Если сопоставить каждому символу алфавита его порядковый номер (нумеруя с 0), то шифрование и дешифрование можно выразить формулами модульной арифметики: y=(x+k) mod n 
+x=(y-k+n) mod n
+где  x — символ открытого текста,  y — символ шифрованного текста, n — мощность алфавита, а  k — ключ.
+С точки зрения математики шифр Цезаря является частным случаем аффинного шифра.</p>
+<p>Шифрование с использованием ключа k = 3. Буква «Е» «сдвигается» на три буквы вперёд и становится буквой «З». Твёрдый знак, перемещённый на три буквы вперёд, становится буквой «Э», буква «Я», перемещённая на три буквы вперёд, становится буквой «В», и так далее:<br>
+Исходный алфавит: А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я<br>
+Шифрованный:      Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я А Б В </p>
+				   </div>
+	            </div>
+
+	        </div>
+        </div>
        
         <div class="section-container section-container-gray">
 	        <div class="container">
