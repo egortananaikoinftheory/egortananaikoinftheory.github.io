@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Tananaikо Egor--Тананайко Егор--Tananaikо Egor</title>
+
+
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta name="keywords" content="Тананайкo Егор, Tananaiko Egor, Web Developmet" />
+  <meta name="description" content="Страница Тананайко Егора (Tananaik Egor) по WEB-технологиям">
+<meta name="robots" content="index,follow" />
+</head>
+
+<body>
+
+  <!-- Loader -->
+  <div class="loader">
+
+  </div>
+
+  <!-- Top menu -->
+  <nav>
+    <a class="scroll-link" href="#what-we-do">Sum</a>
+    <a class="scroll-link" href="#process">BAC</a>
+    <a class="scroll-link" href="#portfolio">Stanford Task 1</a>
+    <div class="hide-menu">
+      <a href=""><i class="fa fa-bars"></i></a>
+    </div>
+  </nav>
+  <div class="show-menu">
+    <a href=""><i class="fa fa-bars"></i></a>
+  </div>
+
+  <!-- Top content -->
+  <div class="top-content">
+    <div class="top-content-text wow fadeInUp">
+      <div class="divider-2"><span></span></div>
+      <h1>Web  Development</h1>
+      <div class="divider-2"><span></span></div>
+      <p>Tananaikо Egor</p>
+
+    </div>
+    <div class="wrapper">
+      <ul>
+        <li><a href="https://vk.com/tanstandart" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100013809422262&ref=bookmarks" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/egortananaiko/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="what-we-do-container section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 what-we-do section-description wow fadeIn">
+          <h2>Sum</h2>
+          <div class="divider-1 wow fadeInUp"><span></span></div>
+
+          <form class = "form1">
+            <div class="group">
+              <input type="text" id="first" required>
+              <span class="bar"></span>
+              <label for = "first">Число 1</label>
+            </div>
+            <div class="group1">
+              <input type="text" id="second" required>
+              <span class="bar"></span>
+              <label for="second">Число 2</label>
+            </div>
+            <div class="group1">
+              <input type="text"  id="sum" placeholder="Ответ" size="3">
+
+            </div>
+          </form>
+
+          <button type="button" class="btn btn-success" OnClick="plus()">Расчитать</button>
+
+
+
+          <script>
+          function plus()
+          {
+            var a;
+            var b;
+            var c;
+            a=parseInt(first.value);
+            b=parseInt(second.value);
+
+
+            c=a+b;
+            sum.value=c;
+          }
+          </script>
+
+
+
+        </div>
+      </div>
+      <div class="row">
+      </div>
+    </div>
+  </div>
+
+  <div class="block-1-container process-container section-container ">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 what-we-do section-description wow fadeIn">
+
+          <h2>Blood alcohol content</h2>
+          <div class="divider-1 wow fadeInUp"><span></span></div>
+          <div><span></span></div>
+
+          <script>
+          function bac()
+          {
+            var a;
+            var b;
+            var c;
+            var d;
+            a=parseFloat(mas_drink.value);
+            b=parseFloat(mas_body.value);
+            if($('#radio1').is(':checked')){
+              c=0.7;
+            }
+            else if ($('#radio2').is(':checked')) {
+              c=0.6;
+            }
+            d=(a/(b*c));
+            result.value=d;
+          }
+          </script>
+
+          <form class = "form1">
+            <div class="group">
+              <input type="text" id="mas_drink" required>
+              <span class="bar"></span>
+              <label for="mas_drink">Введите массу напитка:</label>
+            </div>
+            <div class="group1">
+              <input type="text" id = "mas_body" required>
+              <span class="bar"></span>
+              <label for="mas_body">Введите массу тела: </label>
+            </div>
+
+            <label class="custom-control custom-radio">
+              <input id="radio1" name="radio" type="radio" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Мужчина</span>
+            </label>
+            <label class="custom-control custom-radio">
+              <input id="radio2" name="radio" type="radio" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Женщина</span>
+            </label>
+            <br>
+            <br>
+            <div class="group1">
+              <input type="text"  id="result" placeholder="Результат" size="3">
+            </div>
+          </form>
+          <button type="button" class="btn btn-success" OnClick="bac()">Расчитать</button>
+        </div>
+      </div>
+      <div class="row">
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-container section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 what-we-do section-description wow fadeIn">
+          <h2>Stanford Task 1</h2>
+          <div class="divider-1 wow fadeInUp"><span></span></div><br>
+          <button type="button" class="btn btn-success" id="v1">V1</button>
+          <button type="button" class="btn btn-success" id="v2">V2</button>
+          <br>
+
+
+
+          <script>
+          $("#v2").click(function() {
+            $("#blocks").attr("id", "blocks_new");
+            $(".first_B").addClass("first_newB");
+            $(".first_newB").removeClass("first_B");
+            $(".second_B").addClass("second_newB");
+            $(".second_newB").removeClass("second_B");
+            $(".third_B").addClass("third_newB");
+            $(".third_newB").removeClass("third_B")
+          });
+
+          $("#v1").click(function() {
+            $("#blocks_new").attr("id", "blocks");
+            $(".first_newB").addClass("first_B");
+            $(".first_B").removeClass("first_newB");
+            $(".second_newB").addClass("second_B");
+            $(".second_B").removeClass("second_newB");
+            $(".third_newB").addClass("third_B");
+            $('.third_B').toggleClass("third_newB", false);
+
+          });
+          </script>
+
+
+
+          <div id="blocks">
+            <p class="first_B">A</p>
+            <p class="second_B">B</p>
+            <p class="first_B">C</p>
+            <p class="second_B">D</p>
+            <p class="first_B">E</p>
+            <p class="third_B">F</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7 footer-copyright">
+          2018 &copy; Designed by Tanstandart.
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Javascript -->
+  <script src="assets/js/jquery-1.11.1.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/retina-1.1.0.min.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/masonry.pkgd.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+
+
+</body>
+
+
+</html>
